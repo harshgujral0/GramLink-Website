@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GramLink - Work Progress</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <header>
+        <h1>Work Progress Tracker</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="progress.html">Work Progress</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Check Project Progress</h2>
+        <input type="text" id="location" placeholder="Enter village name">
+        <button onclick="searchProgress()">Search</button>
+        <p id="progress-result"></p>
+        
+    </section>
+
+    <section>
+        <h2>Live Map</h2>
+        <div id="map" style="height: 400px; width: 100%;"></div>
+    </section>
+
+    <footer>
+        <p>© 2025 GramLink. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

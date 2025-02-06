@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GramLink - About</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>About GramLink</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="progress.html">Work Progress</a></li>
+            <li><a href="about.html">About</a></li>
+            
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Contact Us</h2>
+        <p>Email: contact@gramlink.com</p>
+        <p>Phone: +91-1234567890</p>
+        <p>Created by: Your Name</p>
+        <img src="about-us.jpg" alt="About GramLink" width="80%">
+    </section>
+
+    <section id="reviews">
+        <h2>Leave a Review</h2>
+        <p>Rate your experience with GramLink:</p>
+        <div class="star-rating">
+            <input type="radio" name="rating" id="star5" value="5"><label for="star5">⭐</label>
+            <input type="radio" name="rating" id="star4" value="4"><label for="star4">⭐</label>
+            <input type="radio" name="rating" id="star3" value="3"><label for="star3">⭐</label>
+            <input type="radio" name="rating" id="star2" value="2"><label for="star2">⭐</label>
+            <input type="radio" name="rating" id="star1" value="1"><label for="star1">⭐</label>
+        </div>
+        <textarea id="review-text" placeholder="Write your review here..." rows="3"></textarea><br><br>
+        <button onclick="submitReview()">Submit Review</button>
+    </section>
+
+    <footer>
+        <p>© 2025 GramLink. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
