@@ -1,62 +1,195 @@
+/* General Body Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e8f5e9; /* Light green background */
+    background-color: #1F2A44; /* Dark blue background */
+    color: #E0E0E0; /* Light grey text color for readability */
     text-align: center;
 }
 
+/* Header Styles */
 header {
-    background-color: #2e7d32; /* Dark green header */
+    background-color: #2C3E50; /* Deep blue header */
     color: white;
-    padding: 20px;
-    font-size: 24px;
+    padding: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #34495E; /* Darker border for separation */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
 }
 
+/* Navigation Styles */
 nav ul {
     list-style: none;
-    padding: 10px;
-    background: #1b5e20; /* Deep green */
+    padding: 15px;
+    background: #34495E; /* Deep grey-blue background */
     margin: 0;
     display: flex;
     justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for navigation */
 }
 
 nav ul li {
-    padding: 15px;
+    padding: 20px 25px;
+    margin: 0 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 nav ul li a {
-    color: white;
+    color: #BDC3C7; /* Light grey for the links */
     text-decoration: none;
     font-weight: bold;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+nav ul li:hover {
+    background-color: #1ABC9C; /* Teal hover effect */
+    transform: translateY(-5px); /* Subtle hover animation */
 }
 
+nav ul li a:hover {
+    color: white;
+}
+
+/* Section Styles */
+section {
+    padding: 40px;
+    margin: 30px;
+    background: #2C3E50; /* Deep blue-grey for sections */
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
+}
+
+/* Intro Section Styles */
 #intro {
-    background-color: #a5d6a7; /* Soft green section */
-    padding: 30px;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #1ABC9C, #16A085); /* Gradient from teal to dark green */
+    padding: 50px;
+    border-radius: 15px;
+    color: white;
 }
 
 #intro h2 {
-    color: #1b5e20;
+    font-size: 3rem; /* Larger, bold heading */
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
+#intro p {
+    color: #2C3E50; /* Dark grey-blue color for the paragraph */
+    font-size: 1.4rem; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    line-height: 1.8;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center; /* Optional: Center align text */
+}
+
+
+/* Features Section */
 #features {
-    background-color: #c8e6c9; /* Light green */
+    background: #34495E; /* Darker blue-grey for features section */
+    padding: 50px;
+    border-radius: 15px;
+}
+
+#features h2 {
+    color: #1ABC9C; /* Teal color for headings */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#features ul {
+    list-style: none;
+    padding-left: 0;
+    color: #BDC3C7;
+    font-size: 1.2rem;
+}
+
+#features ul li {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #3C4C60; /* Slightly lighter grey-blue for list items */
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#features ul li:hover {
+    background-color: #1ABC9C; /* Teal hover effect */
+    transform: translateY(-5px); /* Slight animation on hover */
+    color: white;
 }
 
 footer {
-    background: #1b5e20;
+    background: #34495E; /* Dark grey-blue footer */
     color: white;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+footer p {
+    margin: 0;
+    color: #BDC3C7; /* Light grey text */
+}
+/* Top Banner Section (Green Background) */
+.top-banner {
+    background-color: #34d369;  /* Green background */
+    padding: 40px;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.logo-container {
+    position: fixed; /* Keeps it always visible */
+    top: 20px; /* Adjust distance from top */
+    left: 20px; /* Adjust distance from left */
+    width: 100px; /* Adjust size */
+    z-index: 1000; /* Keeps it above other elements */
+}
+
+.logo-container img {
+    width: 100%; /* Ensures the image resizes correctly */
+    max-width: 100px; /* Controls the max size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        padding: 12px 15px;
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    #intro h2 {
+        font-size: 2rem;
+    }
+
+    #intro p {
+        font-size: 1rem;
+    }
+
+    #features h2 {
+        font-size: 2rem;
+    }
+
+    #features ul li {
+        font-size: 1rem;
+    }
 }
