@@ -1,30 +1,19 @@
-function handleLogin() {
-    sessionStorage.setItem("loggedIn", true);
-    alert("Login successful!");
-    window.location.href = "index.html"; // Redirect to Home after login
-    return false; // Prevent form submission
-}
-function searchProgress() {
-    let location = document.getElementById("location").value.toLowerCase();
-    let progressData = {
-        "village a": "Road construction - 70% completed",
-        "village b": "Water pipeline installation - 50% completed",
-        "village c": "Solar streetlights setup - 90% completed"
-    };
-
-    let result = progressData[location] || "No data available for this location.";
-    document.getElementById("progress-result").innerText = result;
-}
-
-function initMap() {
-    let map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 28.7041, lng: 77.1025 }, // Default location (Delhi, India)
-        zoom: 5
+    document.addEventListener("DOMContentLoaded", function () {
+        console.log("Project Proposal section loaded");
+    
+        document.getElementById("progress-proposal-btn").addEventListener("click", function () {
+            let projectName = prompt("Enter Project Name:");
+            let projectStatus = prompt("Enter Project Status (Upcoming/In Progress):");
+    
+            if (projectName && projectStatus) {
+                let listId = projectStatus.toLowerCase() === "in progress" ? "projects-in-progress" : "upcoming-projects";
+                let list = document.getElementById(listId);
+    
+                let newProject = document.createElement("li");
+                newProject.textContent = projectName;
+                list.appendChild(newProject);
+            } else {
+                alert("Project details are required!");
+            }
+        });
     });
-
-    let marker = new google.maps.Marker({
-        position: { lat: 28.7041, lng: 77.1025 },
-        map: map,
-        title: "Project Location"
-    });
-}
