@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Proposal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="proposal-container">
+        <div class="proposal-header">
+            <h1>Project Proposal</h1>
+        </div>
+
+        <!-- Add the image -->
+        <img src="proposal-image.jpg" alt="Project Proposal" class="proposal-image">
+
+        <div class="proposal-content">
+            <h2>Upcoming Projects</h2>
+            <ul id="upcoming-projects">
+                <li>No upcoming projects yet.</li>
+            </ul>
+
+            <h2>Projects in Progress</h2>
+            <ul id="projects-in-progress">
+                <li>No projects in progress yet.</li>
+            </ul>
+
+            <button id="show-form-btn">Submit a Proposal</button>
+
+            <!-- Embedded Google Form (Initially Hidden) -->
+            <div id="google-form-container" style="display: none;">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOS5QHO5Eb-XYxVTcZF1zPvDbYeme1Cr6Kbzo5E8WZoiUjzQ/viewform?usp=dialog" width="100%" height="600px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("show-form-btn").addEventListener("click", function () {
+            document.getElementById("google-form-container").style.display = "block";
+        });
+    </script>
+
+</body>
+</html>
