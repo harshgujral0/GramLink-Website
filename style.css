@@ -150,15 +150,23 @@ footer p {
 }
 .logo-container {
     position: fixed; /* Keeps it always visible */
-    top: 20px; /* Adjust distance from top */
+    top: 100px; /* Adjust distance from top */
     left: 20px; /* Adjust distance from left */
-    width: 100px; /* Adjust size */
-    z-index: 1000; /* Keeps it above other elements */
+    width: 150px; /* Adjust size */
+    height: 100px !important;
+    display: flex;
+    align-items: center;
+    z-index: 1000; 
 }
 
 .logo-container img {
-    width: 100%; /* Ensures the image resizes correctly */
-    max-width: 100px; /* Controls the max size */
+     width: 150px !important;  /* Force size increase */
+    max-width: 200px !important;
+    filter: brightness(1.8) contrast(1.5) !important;
+    transform: scale(0.8) !important;
+    width: auto !important;
+    height: auto !important;
+
 }
 ue */
 body {
